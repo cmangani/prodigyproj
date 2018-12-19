@@ -1,0 +1,26 @@
+{
+  "title": "HTML Task",
+  "type": "object",
+  "properties": {
+    "html": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "_task_hash",
+    "_input_hash"
+  ]
+}

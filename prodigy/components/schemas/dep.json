@@ -1,0 +1,76 @@
+{
+  "title": "Dependencies Task",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "arcs": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "head": {
+            "type": "integer"
+          },
+          "child": {
+            "type": "integer"
+          },
+          "label": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "head",
+          "child",
+          "label"
+        ]
+      },
+      "tokens": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "start": {
+              "type": "integer"
+            },
+            "end": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "text",
+            "start",
+            "end",
+            "id"
+          ]
+        }
+      }
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "text",
+    "arcs",
+    "tokens",
+    "_task_hash",
+    "_input_hash"
+  ]
+}

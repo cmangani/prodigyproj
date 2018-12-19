@@ -1,0 +1,62 @@
+{
+  "title": "Compare Task",
+  "type": "object",
+  "properties": {
+    "id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "input": {
+      "type": "object"
+    },
+    "accept": {
+      "type": "object"
+    },
+    "reject": {
+      "type": "object"
+    },
+    "mapping": {
+      "type": "object",
+      "properties": {
+        "A": {
+          "type": "string",
+          "enum": [
+            "accept",
+            "reject"
+          ]
+        },
+        "B": {
+          "type": "string",
+          "enum": [
+            "accept",
+            "reject"
+          ]
+        }
+      }
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "accept",
+    "reject",
+    "mapping",
+    "_task_hash",
+    "_input_hash"
+  ]
+}

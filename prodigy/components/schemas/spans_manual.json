@@ -1,0 +1,87 @@
+{
+  "title": "Manual Spans Task",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "start": {
+            "type": "integer"
+          },
+          "end": {
+            "type": "integer"
+          },
+          "token_start": {
+            "type": "integer"
+          },
+          "token_end": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "token_start",
+          "token_end",
+          "label"
+        ]
+      }
+    },
+    "tokens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "start": {
+            "type": "integer"
+          },
+          "end": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "disabled": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "text",
+          "start",
+          "end",
+          "id"
+        ]
+      }
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "text",
+    "tokens",
+    "_task_hash",
+    "_input_hash"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Spans Task",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "start": {
+            "type": "integer"
+          },
+          "end": {
+            "type": "integer"
+          },
+          "token_start": {
+            "type": "integer"
+          },
+          "token_end": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "start",
+          "end"
+        ]
+      }
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "text",
+    "_task_hash",
+    "_input_hash"
+  ]
+}

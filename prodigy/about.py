@@ -1,0 +1,7 @@
+__title__ = 'prodigy'
+__version__ = '1.6.1'
+__summary__ = 'Radically efficient machine teaching.'
+__uri__ = 'https://prodi.gy'
+__author__ = 'Explosion AI'
+__email__ = 'contact@explosion.ai'
+__license__ = 'All rights reserved'

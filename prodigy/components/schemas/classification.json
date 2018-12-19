@@ -1,0 +1,71 @@
+{
+  "title": "Classification Task",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "start": {
+            "type": "integer"
+          },
+          "end": {
+            "type": "integer"
+          },
+          "token_start": {
+            "type": "integer"
+          },
+          "token_end": {
+            "type": "integer"
+          },
+          "color": {
+            "type": "string"
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "label",
+    "_task_hash",
+    "_input_hash"
+  ]
+}

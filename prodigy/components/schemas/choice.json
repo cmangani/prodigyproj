@@ -1,0 +1,79 @@
+{
+  "title": "Choice Task",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "spans": {
+      "type": "array"
+    },
+    "image": {
+      "type": "string"
+    },
+    "html": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "spans": {
+            "type": "array"
+          },
+          "style": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "accept": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "options",
+    "_task_hash",
+    "_input_hash"
+  ]
+}

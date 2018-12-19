@@ -1,0 +1,24 @@
+{
+  "title": "Text Task",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "_task_hash": {
+      "type": "integer"
+    },
+    "_input_hash": {
+      "type": "integer"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "text",
+    "_task_hash",
+    "_input_hash"
+  ]
+}
